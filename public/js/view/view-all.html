@@ -1,0 +1,25 @@
+<!--menu-->
+<div>
+    <ul class="menu--blue">
+        <li><a href="#">Todos los productos</a></li>
+    </ul>
+</div>
+<br>
+<table class="table blurtime">
+
+    <tr>
+        <th>ID</th>
+        <th>Pais</th>
+        <th>Precio</th>
+        <th>Distribuidora</th>
+    </tr>
+
+    <tr  ng-repeat="pais in paises">
+        <td>{{pais.prod_id}}</td>
+        <td>{{pais.product_name}}</td>
+        <td>{{pais.product_price}}</td>
+        <td>{{pais.product_distribuitor}}</td>
+    </tr>
+
+</table>
+
