@@ -1,0 +1,1 @@
+var appLoader = angular.module("loaderApp", ["ngRoute"]);
