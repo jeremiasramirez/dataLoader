@@ -14,7 +14,7 @@
         <th>Distribuidora</th>
     </tr>
 
-    <tr  ng-repeat="pais in paises | limitTo: 7">
+    <tr  ng-repeat="pais in paises | limitTo: 6">
         <td>{{pais.prod_id}}</td>
         <td>{{pais.product_name}}</td>
         <td>{{pais.product_price}}</td>
@@ -33,5 +33,6 @@
 <!--all-->
 
 <div class="responsive">
+    <p class="btn--rm min"> 1 de 12</p>
     <a href="#" class="btn--yes medium" >Mostrar todos</a>
 </div>
