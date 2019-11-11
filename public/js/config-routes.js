@@ -5,6 +5,13 @@ appLoader.config(["$routeProvider", function($routeProvider){
             templateUrl: "public/js/view/view-clientes.html",
             controller: "clientes.controller"
         })
+        .when("all/", {
+            templateUrl: "public/js/view/view-clientes.html",
+            controller: "all"
+        })
+        .otherwise({
+            redirectTo : "/"
+        })
 
 
 
