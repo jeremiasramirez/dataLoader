@@ -5,6 +5,17 @@
     </ul>
 </div>
 <br>
+
+    <!-- buscador -->
+    <form class="form">
+        <input type="search" placeholder="Buscar productos" ng-model="searchs">
+    </form>
+
+    <!--size data-->
+    <div class="responsive">
+        <p class="btn--add medium">{{len | number:'0'}} productos</p>
+    </div>
+
 <table class="table blurtime">
 
     <tr>
@@ -14,7 +25,7 @@
         <th>Distribuidora</th>
     </tr>
 
-    <tr  ng-repeat="pais in paises">
+    <tr  ng-repeat="pais in paises | filter: searchs">
         <td>{{pais.prod_id}}</td>
         <td>{{pais.product_name}}</td>
         <td>{{pais.product_price}}</td>

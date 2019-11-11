@@ -1,7 +1,8 @@
 appLoader.controller("all", ["$scope", "$http", function($scope, $http){
     floatNotificationError("Cargando...");
-    setTimeout(()=>{
 
+    $scope.len =  0;
+    setTimeout(()=>{
 
         $scope.paises = [];
 
@@ -14,7 +15,7 @@ appLoader.controller("all", ["$scope", "$http", function($scope, $http){
         }).then((res)=>{
 
             $scope.paises = res.data.clients;
-
+            $scope.len = res.data.clients.length;
         });
 
     }, 2000);
