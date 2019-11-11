@@ -15,7 +15,7 @@ class DATABASE {
         $this->host = "127.0.0.1";
         $this->user = "jere";
         $this->password = "0847";
-        $this->db = "clientes";
+        $this->db = "buscador";
     }
 
 //    return host
