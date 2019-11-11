@@ -14,7 +14,7 @@
         <th>Distribuidora</th>
     </tr>
 
-    <tr  ng-repeat="pais in paises | limitTo: 6">
+    <tr  ng-repeat="pais in paises | limitTo: positionPage | limitTo: -6">
         <td>{{pais.prod_id}}</td>
         <td>{{pais.product_name}}</td>
         <td>{{pais.product_price}}</td>
@@ -25,14 +25,14 @@
 
     <!--pagination-->
     <div style="display: flex;justify-content: space-between">
-        <button class="btn--rm"><</button>
-        <button class="btn--rm">></button>
+        <button class="btn--rm" ng-click="pageLeft()"><</button>
+        <button class="btn--rm" ng-click="pageRight()">></button>
     </div>
 
 
 <!--all-->
 
 <div class="responsive">
-    <p class="btn--rm min"> 1 de 12</p>
+    <p class="btn--rm min"> {{positionPageView}} de {{lenPage}}</p>
     <a href="#" class="btn--yes medium" >Mostrar todos</a>
 </div>
