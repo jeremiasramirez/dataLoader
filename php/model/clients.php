@@ -18,17 +18,21 @@ class clients extends DATABASE{
 
         try{
 
-            $sqlStatement = "SELECT * FROM $table";
+            $sqlStatement = "SELECT * FROM products";
             $querySql = $conection->query($sqlStatement);
 
             while($row = mysqli_fetch_array($querySql)){
                 $registers[$iterator] = $row;
                 $iterator ++;
-            }
 
-            echo json_encode(array(
-                "clients" => $registers
-            ));
+            }
+            echo json_encode(array("clients" => $registers));
+
+
+
+
+
+
 
 
         }catch(Exception $e){
@@ -39,3 +43,4 @@ class clients extends DATABASE{
     }
 
 }
+
