@@ -1,18 +1,21 @@
 appLoader.controller("all", ["$scope", "$http", function($scope, $http){
-
-    $scope.msjStatus = 0;
-
-    // request
-    $http({
-
-        method: "GET",
-        url: "php/controller/controller-countries.php"
-
-    }).then((res)=>{
-
-        console.log(res);
-
-    });
+    floatNotificationError("Cargando...");
+    setTimeout(()=>{
 
 
+        $scope.paises = [];
+
+        // request
+        $http({
+
+            method: "GET",
+            url: "php/controller/controller-countries.php"
+
+        }).then((res)=>{
+
+            $scope.paises = res.data.clients;
+
+        });
+
+    }, 2000);
 }]);
