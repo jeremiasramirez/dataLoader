@@ -1,0 +1,37 @@
+<!--menu-->
+<div>
+     <ul class="menu--black">
+         <li><a href="#">Loader + Pagination</a></li>
+     </ul>
+</div>
+<br>
+<table class="table">
+
+    <tr>
+        <th>ID</th>
+        <th>Pais</th>
+        <th>Precio</th>
+        <th>Distribuidora</th>
+    </tr>
+
+    <tr  ng-repeat="pais in paises | limitTo: 7">
+        <td>{{pais.prod_id}}</td>
+        <td>{{pais.product_name}}</td>
+        <td>{{pais.product_price}}</td>
+        <td>{{pais.product_distribuitor}}</td>
+    </tr>
+
+</table>
+
+    <!--pagination-->
+    <div style="display: flex;justify-content: space-between">
+        <button class="btn--rm"><</button>
+        <button class="btn--rm">></button>
+    </div>
+
+
+<!--all-->
+
+<div class="responsive">
+    <a href="#" class="btn--rm medium" >Mostrar todos</a>
+</div>
